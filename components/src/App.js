@@ -1,17 +1,12 @@
-// import './App.css';
-
-function App() {
+import Title from "./components/Title";
+import Paragraph from "./components/Paragraph";
+import "./App.css";
+function App(props) {
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestias
-        ipsam ratione dolore laudantium quas? Id voluptatibus tenetur asperiores
-        similique provident porro? Quasi rerum unde sapiente enim aliquid, ea
-        eaque reiciendis dolor quo laboriosam iure at hic voluptatibus
-        recusandae praesentium nam eligendi nulla. Ipsum, deserunt? Quas eaque
-        quis consequatur officiis?
-      </p>
+    <div className="main">
+      <Title></Title>
+      <Paragraph></Paragraph>
+      <Paragraph></Paragraph>
     </div>
   );
 }
