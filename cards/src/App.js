@@ -11,7 +11,7 @@ import "./App.css";
 import CardWrapper from "./components/CardWrapper";
 import freelancer1 from "./assets/img/freelancer-1.jpg";
 
-function App() {
+function App(props) {
   const freelancer = [
     {
       id: 0,
@@ -33,7 +33,7 @@ function App() {
           </div>
         </div>
         <div className="info-container">
-          <h3>MR ROBERT</h3>
+          <h3>MR.ROBERTS</h3>
           <p>UI/UX Designer</p>
           <div className="hire">
             <div>
