@@ -1,0 +1,125 @@
+.info-container {
+    padding: 1em;
+  }
+  
+  .info-container h3,
+  .info-container p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: center;
+  }
+  .info-container h3 {
+    font-weight: 400;
+  }
+  .info-container p {
+    font-size: 1.3rem;
+  }
+  .hire {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 2em 0;
+  }
+  .hire span.price {
+    color: #56bb4d;
+    font-weight: 600;
+  }
+  .hire .hire-button {
+    background-color: #2dced4;
+    font-size: 1.3rem;
+    padding: 0.5em 1.4em;
+    color: white;
+    border-radius: 100px;
+  }
+  .rating{
+      display: flex;
+      align-items: center;
+      margin: 1em 0;
+  }
+  .rating>div{
+      margin-right: .5em;
+      font-size: 1.3rem;
+  }
+  .rating>div:first-of-type{
+      color: white;
+      background-color: #fdbd45;
+      padding: .1em .2em;
+  }
+  .rating>div:nth-child(2){
+      color: #fdbd45;
+  }
+  .rating>div .fa-star{
+      margin-right: .175em;
+  }
+  
+  .icons{
+      display: flex;
+      align-items: center;
+      margin: 1em 0;
+  }
+  .icons *{
+      font-size: 1.2rem;
+      color: #8cc986;
+  }
+  .icons .verified{
+  font-size: 2.2rem;
+  margin-right: .5em;
+  position: relative;
+  padding-right: 1.7em;
+  }
+  .icons .verified .fa-circle-check{
+      font-size: 2rem;
+  }
+  .icons .verified span{
+      font-size: .885rem;
+      color: white;
+      background-color: #8cc986;
+      padding: 0 6px 0 8px;
+      border-radius: .8rem;
+      position: absolute;
+      top: 8px;
+      left: 18px;
+      font-weight: 400;
+  }
+  .icons .circle{
+      margin-right: .8em;
+      font-weight: 900;
+      border: 1px solid #8cc986;
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+  }
+  .icons .not-available{
+      border: 1px solid #bcbcbc;
+  }
+  .icons .not-available *{
+      color: #bcbcbc;
+  }
+
+  @media screen and (min-width:992px){
+    .rating,.icons{
+        flex-wrap: wrap; 
+    }
+    .rating>div{
+      margin-bottom: 1em;
+      font-size: 1.3rem;
+    }
+    .icons{
+      justify-content: space-evenly;
+    }
+    .icons .verified{
+      margin: 0 30% .5em;
+    }
+  }
+  @media screen and (min-width:1200px){
+    .icons{
+    justify-content: flex-start;
+    }
+    .icons .verified{
+      margin: 0 .5em 0 0;
+    }
+  }

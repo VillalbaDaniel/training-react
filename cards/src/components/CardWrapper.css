@@ -11,130 +11,16 @@
 .outer-card:hover {
   box-shadow: 0px 4px 19.98px 7.02px rgba(0, 0, 0, 0.17);
 }
-.img-container {
-  padding-top: 1em;
-}
-.img-container .img-wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  position: relative;
-}
 
-.img-container img {
-  border-radius: 50%;
-  max-width: 100%;
-  height: auto;
+@media screen and (min-width:768px){
+  .outer-card{
+      max-width: calc(50% - 3em);
+      margin: 0 1em 2em;
+  }
 }
-.img-container span.dot {
-  height: 15px;
-  width: 15px;
-  display: inline-block;
-  background-color: #1cdb1c;
-  border-radius: 50%;
-  border: 2px solid white;
-  position: absolute;
-  top: 77px;
-  right: 5px;
-}
-.info-container {
-  padding: 1em;
-}
-
-.info-container h3,
-.info-container p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  text-align: center;
-}
-.info-container h3 {
-  font-weight: 400;
-}
-.info-container p {
-  font-size: 1.3rem;
-}
-.hire {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  margin: 2em 0;
-}
-.hire span.price {
-  color: #56bb4d;
-  font-weight: 600;
-}
-.hire .hire-button {
-  background-color: #2dced4;
-  font-size: 1.3rem;
-  padding: 0.5em 1.4em;
-  color: white;
-  border-radius: 100px;
-}
-.rating{
-    display: flex;
-    align-items: center;
-    margin: 1em 0;
-}
-.rating>div{
-    margin-right: .5em;
-    font-size: 1.3rem;
-}
-.rating>div:first-of-type{
-    color: white;
-    background-color: #fdbd45;
-    padding: .1em .2em;
-}
-.rating>div:nth-child(2){
-    color: #fdbd45;
-}
-.rating>div .fa-star{
-    margin-right: .175em;
-}
-
-.icons{
-    display: flex;
-    align-items: center;
-    margin: 1em 0;
-}
-.icons *{
-    font-size: 1.2rem;
-    color: #8cc986;
-}
-.icons .verified{
-font-size: 2.2rem;
-margin-right: .5em;
-position: relative;
-padding-right: 1.7em;
-}
-.icons .verified .fa-circle-check{
-    font-size: 2rem;
-}
-.icons .verified span{
-    font-size: .885rem;
-    color: white;
-    background-color: #8cc986;
-    padding: 0 6px 0 8px;
-    border-radius: .8rem;
-    position: absolute;
-    top: 8px;
-    left: 18px;
-    font-weight: 400;
-}
-.icons .circle{
-    margin-right: .8em;
-    font-weight: 900;
-    border: 1px solid #8cc986;
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.icons .not-available{
-    border: 1px solid #bcbcbc;
-}
-.icons .not-available *{
-    color: #bcbcbc;
+@media screen and (min-width:992px){
+  .outer-card{
+      max-width: calc(33.333% - 2em);
+      
+  }
 }
