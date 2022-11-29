@@ -1,0 +1,32 @@
+.cardWrapper {
+    border: 1px solid #e5e5e5;
+    border-radius: .4rem;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+.cardWrapper .card-title{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.cardWrapper .card-content{
+    margin: .8em 0;
+    font-size: 1.3rem;
+}
+.cardWrapper .card-footer {
+    display: flex;
+    justify-content: space-around;
+}
+.cardWrapper .card-footer a{
+    max-width: 40%;
+    color: var(--pink);
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: 1px solid var(--pink);
+    border-radius: .4rem;
+    padding: .6em .8em;
+    transition: all .2s ease-out;
+}
+.cardWrapper .card-footer a:hover{
+    background-color: #af4077;
+    color: #fff;
+}

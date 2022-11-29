@@ -1,0 +1,34 @@
+header.top-content h1 {
+    background-color: var(--red);
+    padding: 0 0.5em;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: .5em;
+}
+header.top-content nav ul {
+    list-style-type: none;
+}
+header.top-content nav li {
+    background-color: var(--green);
+    margin-bottom: .3em;
+    color: #fafafa;
+    padding: .5em .8em;
+    border-radius: 0.2rem;
+    transition: all .2s linear;
+}
+header.top-content nav li:hover {
+    background-color:var(--teal);
+    transform: scale(1.05);
+}
+header.top-content nav button {
+    background-color: var(--blue);
+    color: white;
+    padding: .5em .8em;
+    border-radius: 0.2rem;
+    width: 100%;
+    transition: all .2s linear;
+}
+header.top-content nav button:hover {
+    background-color:var(--cyan);
+    transform: scale(1.05);
+}

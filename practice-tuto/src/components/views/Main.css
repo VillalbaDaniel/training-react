@@ -1,0 +1,7 @@
+main.main-content {
+    margin: 2em 0;
+}
+main.main-content .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
