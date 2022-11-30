@@ -1,0 +1,41 @@
+.p-style {
+  color: white;
+  background-color: rgb(245, 86, 86);
+  border: 3px solid black;
+  border-radius: 0.5rem;
+  margin: 0.7em 62% 2em 0.6em;
+  padding: 0.5rem;
+  font-size: 1.285em;
+}
+.countDown {
+    display: inline-block;
+  color: white;
+  background-color: rgb(245, 86, 86);
+  border: 3px solid black;
+  border-radius: 0.5rem;
+  margin-left: 2em;
+  margin-top: 2em;
+  padding: 0.5rem;
+  font-size: 3em;
+  transition: all 3s cubic cubic-bezier(1, -0.01, 0, 0.99);
+  animation-name: anim;
+  animation-duration: 10s;
+  animation-iteration-count: inherit;
+  
+}
+@keyframes anim {
+  0% {
+    background-color: blue;
+  }
+  40% {
+    background-color: blue;
+  }
+  70% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: rgb(245, 86, 86);
+  }
+}
+
+
