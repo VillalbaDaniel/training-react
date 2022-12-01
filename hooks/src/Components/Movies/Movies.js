@@ -3,16 +3,17 @@ import "./Movies.css";
 import movies from "../../db/movies.json";
 import MoviesWrappers from "./MoviesWrapper";
 import MoviesMain from "./MoviesMain";
+import MoviesAction from "./MoviesAction";
 import Card from "./Card";
 
 function Movies() {
   const [moviesList, setMoviesList] = useState(movies);
   const [fadeIn, setFadeIn] = useState(true);
-  const changeVisibility = (toShow) => {
+  const changeVisibility = (filteredMovies) => {
     setFadeIn(false);
     setTimeout(() => {
+      setMoviesList(filteredMovies);
       setFadeIn(true);
-      setMoviesList(toShow);
     }, 500);
   };
 
@@ -34,11 +35,11 @@ function Movies() {
 
   return (
     <MoviesMain>
-      <div className="actions">
-        <button onClick={noFilter}>All</button>
-        <button onClick={filterComedy}>Comedy</button>
-        <button onClick={filterDrama}>Drama</button>
-      </div>
+      <MoviesAction
+        onFilterComedy={filterComedy}
+        onFilterDrama={filterDrama}
+        noFilter={noFilter}
+      ></MoviesAction>
       <MoviesWrappers>
         {moviesList.map((movie) => (
           <Card key={movie.id} movie={movie} fadeIn={fadeIn} />
