@@ -6,6 +6,7 @@ import {
   faArrowDownLong,
   faArrowUpLong,
   faBriefcase,
+  faCar,
   faCommentDollar,
   faSackDollar,
 } from "@fortawesome/free-solid-svg-icons";
@@ -35,9 +36,17 @@ export const classes = {
     bgColor: "light-electricity",
     color: "electricity",
   },
+  insurance: {
+    bgColor: "light-insurance",
+    color: "insurance",
+  },
+  insurance: {
+    bgColor: "light-insurance",
+    color: "insurance",
+  },
 };
 
-export const itemList = [
+export const itemsList = [
   {
     icons: [faSquare, faChampagneGlasses],
     classes: classes.bill,
@@ -87,5 +96,3 @@ export const itemList = [
     },
   },
 ];
-
-

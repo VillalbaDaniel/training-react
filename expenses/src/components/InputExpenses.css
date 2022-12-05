@@ -1,4 +1,5 @@
 .new-expense {
+  position: relative;
     width: 100%;
     background-color: #237fcd;
     padding: 2em;
@@ -6,6 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+  .new-expense .item-icon{
+    position: absolute;
+    top: -18px;
   }
   
   .new-expense h2 {
@@ -20,6 +25,8 @@
     padding: 0.5em 3em;
     display: flex;
     flex-direction: column;
+    max-height: 150px;
+    transition: all 0.3s linear;
   }
   .new-expense input,
   .new-expense select,
@@ -43,7 +50,7 @@
     color: #f4ffff;
     font-weight: bold;
     font-size: 1.2rem;
-    margin: 3em;
+    margin: 3em 0 1em;
     flex-basis: 30%;
   }
   .income-container {
@@ -102,4 +109,11 @@
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
-  
+  /* Añadido al final del archivo */
+.hidden, .hidden .checkmark, button.hidden {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all .3s linear;
+}
