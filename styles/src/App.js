@@ -1,18 +1,29 @@
-// import './App.css';
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: AliceBlue;
+  margin-botton: 1rem;
+`;
+
+const Wrapper = styled.section`
+font-size:1.5em;
+padding:4em;
+background:DarkOliveGreen;
+text-align:center;
+`
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
+    <Wrapper>
+      <Title>Hello, World!</Title>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestias
         ipsam ratione dolore laudantium quas? Id voluptatibus tenetur asperiores
-        similique provident porro? Quasi rerum unde sapiente enim aliquid, ea
-        eaque reiciendis dolor quo laboriosam iure at hic voluptatibus
-        recusandae praesentium nam eligendi nulla. Ipsum, deserunt? Quas eaque
-        quis consequatur officiis?
+        similique provident porro? Quasi rerum unde sapiente enim aliquid.
       </p>
-    </div>
+    </Wrapper>
   );
 }
 
