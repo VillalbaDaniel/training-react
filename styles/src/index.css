@@ -44,3 +44,8 @@ h5{
 h6{
   font-size: 0.7rem;
 }
+.flex-colum{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
