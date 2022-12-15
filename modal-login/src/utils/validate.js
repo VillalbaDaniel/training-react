@@ -39,3 +39,11 @@ export const validatePassword = (password) => {
   console.log("password is invalid");
   return false;
 };
+
+
+export const validatePasswordLength = (password) => {
+  if (password.length < 8 || password.length > 15) {
+    return false;
+  }
+  return true;
+};
