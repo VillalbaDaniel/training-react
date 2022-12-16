@@ -1,9 +1,14 @@
-import './App.css';
-import FilterReducer from './components/FilterReducer';
+// import './App.css';
+import StringModifier from "./components/StringModifier";
+import StringReader from "./components/StringReader";
+import StringProvider from "./store/StringProvider";
 
 function App() {
   return (
-    <FilterReducer></FilterReducer>
+    <StringProvider>
+        <StringReader></StringReader>
+        <StringModifier></StringModifier>
+    </StringProvider>
   );
 }
 
