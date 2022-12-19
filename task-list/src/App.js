@@ -1,80 +1,47 @@
-import classes from "./App.module.css";
-import { useState } from "react";
- 
+import { useState } from 'react';
+import data from "./mockedDB/tasks.json"
+import TaskList from './components/Tasks/TasksList';
+import TasksInput from './components/Tasks/TasksInput';
+import classes from './App.module.css';
 
+const App = () => {
+  const [tasks, setNewTask] = useState(data);
 
-const tasks = [
-  {
-    id: 1,
-    text: "morbi non quam",
-  },
-  {
-    id: 2,
-    text: "ut dolor morbi vel lectus in quam",
-  },
-  {
-    id: 3,
-    text: "morbi non quam nec dui luctus",
-  },
-];
-
-function TaskForm(props) {
-  const [task, setTask] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.onNewTask(task);
-    //último paso
-    setTask("");
-  };
-  const handleChange = (e) => {
-    setTask(e.target.value);
-  };
-
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text" name="task" value={task} />
-        <button >Save</button>
-      </form>
-    </div>
-  );
-}
-
-function TaskList(props) {
-  return (
-    <ul>
-      {props.onInitialTasks.map((task) => {
-        return <li key={task.id}>{task.text}</li>;
-      })}
-    </ul>
-  );
-}
-
-function App() {
-  const [updatedTasks, setNewTask] = useState(tasks);
-
-//   console.log(updatedTasks);
-
-  const saveTask = (createdTask) => {
-    // console.log(createdTask);
-    setNewTask((prevState) => {
-      return [
-        ...prevState,
-        {
-          id: Math.ceil(Math.random() * 1000),
-          text: createdTask,
-        },
-      ];
+  const addTaskHandler = enteredText => {
+    setNewTask(prevTasks => {
+      const updatedTasks = [...prevTasks];
+      updatedTasks.unshift({ text: enteredText, id: Math.random().toString(16).substring(2) });
+      return updatedTasks;
     });
   };
 
-  return (
-    <>
-      <TaskForm onNewTask={saveTask} />
-      <TaskList onInitialTasks={updatedTasks} />
-    </>
+  const deleteItemHandler = taskId => {
+    setNewTask(prevTasks => {
+      const updatedTasks = prevTasks.filter(task => task.id !== taskId);
+      return updatedTasks;
+    });
+  };
+
+  let content = (
+    <h2 style={{ textAlign: 'center', padding: '1em', border: '1px solid #339900', backgroundColor: '#99cc33' }}>No tasks availables. Add one?</h2>
   );
-}
+
+  if (tasks.length > 0) {
+    content = (
+      <TaskList items={tasks} onDeleteItem={deleteItemHandler} />
+    );
+  }
+
+  return (
+    <main>
+      <section className={classes["task-form"]}>
+        <TasksInput onAddTask={addTaskHandler} />
+      </section>
+      <section className={classes["tasks-content"]}>
+        {content}
+      </section>
+    </main>
+  );
+};
 
 export default App;
