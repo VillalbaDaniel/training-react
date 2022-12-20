@@ -1,11 +1,26 @@
 // import './App.css';
+import {Routes, Route} from "react-router-dom"
+import NavBar from "./components/layout/navigation/NavBar";
+import Home from "./views/Home"
+import About from "./views/About"
+import Contact from "./views/Contact"
+
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores exercitationem ad enim cumque quia aut officiis unde excepturi aliquam sunt, alias eum numquam maiores dolore eius non sit eaque aspernatur, impedit modi magni ipsam, facere ut! Ab, sapiente nostrum aspernatur numquam ducimus, sequi eaque amet explicabo perferendis tempora animi.</p>
-    </div>
+   <>
+   <header>
+    <h1>React Router DOM</h1>
+    <NavBar></NavBar>
+    </header>
+   <main>
+    <Routes>
+      <Route path="/" element={<Home></Home>}/>
+      <Route path="/about" element={<About></About>}/>
+      <Route path="/contact" element={<Contact></Contact>}/>
+    </Routes>
+   </main>
+   </>
   );
 }
 
