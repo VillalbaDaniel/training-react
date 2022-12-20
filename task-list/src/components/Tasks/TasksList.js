@@ -8,6 +8,7 @@ const TasksList = props => {
           key={key}
           id={key}
           onDelete={props.onDeleteItem}
+          onEdit={props.onEditItem}
           even={(index % 2) === 0}
         >
           {props.items[key].title}
